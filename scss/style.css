@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*Color Variables*/
+:root {
+  --blue:hsl(223, 87%, 63%);
+  --paleBlue:hsl(223, 100%, 88%);
+  --lightRed:hsl(354, 100%, 66%);
+  --gray:hsl(0, 0%, 59%);
+  --darkBlue:hsl(209, 33%, 12%);
+}
+
+/*reset*/
+body, p, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/*base styles*/
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+.container {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.75em;
+  color: var(--gray);
+  font-weight: 300;
+}
+
+span {
+  color: var(--darkBlue);
+  font-weight: 700;
+}
+
+p {
+  font-weight: 600;
+  color: var(--darkBlue);
+}
+
+.button {
+  background-color: var(--blue);
+  border: none;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 7px 10px 0px rgba(79, 125, 243, 0.4);
+          box-shadow: 2px 7px 10px 0px rgba(79, 125, 243, 0.4);
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+input {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid var(--paleBlue);
+  padding-left: 50px;
+}
+
+.formInput {
+  color: #c2d3ff;
+}
+
+.facebook, .twitter, .instagram {
+  padding: 2%;
+}
+
+.facebook a, .twitter a, .instagram a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--blue);
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #c2d3ff;
+}
+
+a:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.socialMedia {
+  width: 40%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.textHeader {
+  text-align: center;
+}
+
+.warning {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--lightRed);
+  text-align: center;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Mobile Styles*/
+.container {
+  max-width: 540px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4em 2.5em 1.5em;
+}
+
+.container .dashboard img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container .dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dashForm {
+  display: block;
+}
+
+.container header, .container .textHeader, .container .dashboard, .container .dashForm, .container .socialMedia, .container footer, .container .copyRight {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 541px) and (max-width: 700px) {
+  .container {
+    max-width: 700px;
+    height: auto;
+  }
+  .dashboard {
+    width: 85%;
+    height: auto;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 960px) {
+  .container {
+    max-width: 960px;
+    height: auto;
+  }
+  .dashboard {
+    width: 75%;
+    height: auto;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    height: auto;
+  }
+  .dashForm .email {
+    float: left;
+    margin-right: 1em;
+  }
+  .dashForm .submit {
+    float: right;
+  }
+  .dashForm .submit .button {
+    width: 200px;
+  }
+  .dashboard {
+    width: 60%;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
